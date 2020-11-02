@@ -20,7 +20,7 @@ The writer can:
 ## Figma link: https://www.figma.com/file/vThpbSu31u2ImVmtmhFYb3/Untitled?node-id=0%3A1  
 
 ## Setup Instruction:
-*click on the link to the deployed page:
+*click on the link to the deployed page: https://mikespersonalblog.herokuapp.com/
 
  ## Technologies used:
   * Python
