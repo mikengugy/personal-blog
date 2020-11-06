@@ -1,4 +1,5 @@
 import unittest
+from app.models import Post,User
 from flask import current_app
 from app import db, create_app
 

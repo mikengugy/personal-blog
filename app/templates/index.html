@@ -4,6 +4,12 @@
 {% block title %}Home{% endblock %}
 
 {% block page_content %}
+<div>
+    <h1>Quote</h1>
+    {{quote.author}}
+    <br>
+    {{quote.quote}}
+</div>
 <div class="page-header">
     Hello,
     {% if current_user.is_authenticated %}

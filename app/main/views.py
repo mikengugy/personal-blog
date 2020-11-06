@@ -3,6 +3,11 @@ from . import main
 from flask_login import login_required,current_user
 from ..models import User, Post, Permission, Comment
 from .forms import ProfileForm,PostForm,CommentForm
+
+from datetime import datetime
+from ..email import mail_message,notification_message
+
+from ..requests import get_quote
 from .. import db
 import markdown2
 from flask.views import View,MethodView
@@ -10,13 +15,14 @@ from flask.views import View,MethodView
 
 @main.route('/', methods=['GET', 'POST'])
 def index():
+    quote = get_quote()
     post_form = PostForm()
     if post_form.validate_on_submit():
         post = Post(body=post_form.body.data,author=current_user._get_current_object())
         db.session.add(post)
         return redirect(url_for('.index'))
     posts = Post.query.order_by(Post.timestamp.desc()).all()
-    return render_template('index.html', post_form=post_form, posts=posts)
+    return render_template('index.html', post_form=post_form, posts=posts, quote = quote)
 
 @main.route('/user/<username>')
 def user(username):

@@ -2,6 +2,7 @@ import os
 
 class Config:
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Access@localhost/mypersonalblog'
+    QUOTE_API_BASE_URL = 'http://quotes.stormconsultancy.co.uk/random.json'
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     SECRET_KEY = 'Michael123'
     UPLOADED_PHOTOS_DEST ='app/static/photos'
@@ -16,5 +17,6 @@ class DevConfig(Config):
 
 config_options = {
 'development':DevConfig,
-'production':ProdConfig
+'production':ProdConfig,
+
 }
