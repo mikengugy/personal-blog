@@ -17,17 +17,27 @@ The writer can:
   * Create a blog from the application.
   * Edit and delete blogs created.
 
-## Figma link: https://www.figma.com/file/vThpbSu31u2ImVmtmhFYb3/Untitled?node-id=0%3A1  
+## Figma Design: 
+For the figma design visit https://www.figma.com/file/vThpbSu31u2ImVmtmhFYb3/Untitled?node-id=0%3A1  
 
 ## Setup Instruction:
-*click on the link to the deployed page: https://mikespersonalblog.herokuapp.com/
+1. Open your terminal (Ctrl + Alt + T)
+2. Git clone https://github.com/mikengugy/personal-blog.git
+3. cd mkondoni 
+4. sudo apt-get update
+5. sudo apt-get install python3.6
+6. sudo apt-get install python3-pip
+7. sudo apt-get install python3.6-venv
+8. python3.6 -m venv virtual
+9. source virtual/bin/activate
+10. pip install -r requirements.txt
 
  ## Technologies used:
   * Python
   * Bootsrap
   * Postgres(database)
 
-## License:
+
 
 ## Author:
 
